@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
   },
   "keywords": [],
   "author": "Bimal Vasan",
@@ -12,5 +13,8 @@
   "dependencies": {
     "axios": "^0.16.2",
     "vue": "^2.4.2"
+  },
+  "devDependencies": {
+    "lite-server": "^2.3.0"
   }
 }

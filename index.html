@@ -2,12 +2,20 @@
 
 <head>
     <title></title>
+    <link rel="stylesheet" href="src/assets/styles.css">
 </head>
 
 <body>
-    <div id="growler"></div>
+    <div id="growler">
+        <!-- <h2 v-text="appName" v-bind:style="[accentColor, headers]"></h2> -->
+        <h2 v-text="appName" v-bind:class="[accentColor, headers]"></h2>
+        <input v-model="query" placeholder="Search...">
+        <br />
+        <div>Searching for: {{ query }}</div>
+    </div>
     <script type="text/javascript" src="node_modules/vue/dist/vue.min.js"></script>
     <script type="text/javascript" src="node_modules/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="src/app.js"></script>
 </body>
 
 </html>
