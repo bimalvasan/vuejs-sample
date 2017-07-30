@@ -16,6 +16,14 @@ var growler = new Vue({
         //     fontFamily: 'Verdana',
         //     margin: 0
         // },
-        query: ''
+        query: '',
+        message: '',
+        isPowerSyntaxEnabled: true,
+        searchIndex: 'beers',
+        searchIndexes: [],
+        searchSearchIndex: 'beers',
+        searchSearchIndexes: [],
+        postal: 0,
+        name: ''
     }
 });

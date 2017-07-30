@@ -9,9 +9,56 @@
     <div id="growler">
         <!-- <h2 v-text="appName" v-bind:style="[accentColor, headers]"></h2> -->
         <h2 v-text="appName" v-bind:class="[accentColor, headers]"></h2>
-        <input v-model="query" placeholder="Search...">
-        <br />
-        <div>Searching for: {{ query }}</div>
+        <input v-model.trim="query" placeholder="Search..."><br />
+        <div>Searching for: {{ query }}</div><br />
+        <input v-model.lazy.trim="name" placeholder="Name..."><br />
+        <div>Searching for: {{ name }}</div><br />
+        <textarea v-model="message"></textarea><br />
+        <input v-model.number="postal"><br />
+        <label>
+        <input type="checkbox" v-model="isPowerSyntaxEnabled">
+        Single Checkbox
+        </label><br />
+        <label>
+            <input type="checkbox" value="beers" v-model="searchIndexes">
+            Beers
+        </label><br />
+        <label>
+            <input type="checkbox" value="breweries" v-model="searchIndexes">
+            Breweries
+        </label><br />
+        <small>
+            Selected: {{searchIndexes}}
+        </small><br />
+        <label class="form-check-label">
+            <input type="radio" value="beers" v-model="searchIndex">
+            Beers
+        </label><br />
+        <label class="form-check-label">
+            <input type="radio" value="breweries" v-model="searchIndex">
+            Breweries
+        </label><br />
+        <small>
+            Selected: {{searchIndex}}
+        </small><br />
+        <select v-model='searchSearchIndex'>
+            <option value="beers">Beers</option>
+            <option value="breweries">Breweries</option>
+            <option value="distilleries">Distilleries</option>
+            <option value="pubs">Pubs</option>
+        </select>
+        <small>
+            Selected: {{searchSearchIndex}}
+        </small><br />
+        <select multiple v-model='searchSearchIndexes'>
+            <option value="beers">Beers</option>
+            <option value="breweries">Breweries</option>
+            <option value="distilleries">Distilleries</option>
+            <option value="pubs">Pubs</option>
+        </select>
+        <small>
+            Selected: {{searchSearchIndexes}}
+        </small><br />
     </div>
     <script type="text/javascript" src="node_modules/vue/dist/vue.min.js"></script>
     <script type="text/javascript" src="node_modules/axios/dist/axios.min.js"></script>
